@@ -69,8 +69,9 @@ export default function PlanningCalendar({ events }: Props) {
             events={events}
             
             firstDay={1} 
+            hiddenDays={[0]} 
             allDaySlot={false}
-            slotMinTime="08:00:00"
+            slotMinTime="07:00:00"
             slotMaxTime="20:00:00"
             slotDuration="01:00:00"
             
