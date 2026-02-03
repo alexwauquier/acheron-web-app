@@ -1,0 +1,55 @@
+:root {
+  --fc-border-color: #cbd5e1;
+  --fc-today-bg-color: hsl(var(--accent) / 0.15);
+  --fc-now-indicator-color: hsl(var(--primary));
+  --fc-page-bg-color: transparent;
+}
+
+.fc {
+  font-family: inherit;
+  --fc-timegrid-slot-height: 35px;
+}
+
+.fc-col-header-cell {
+  background-color: hsl(var(--muted) / 0.3);
+  border: none !important;
+  border-bottom: 2px solid var(--fc-border-color) !important;
+  border-right: 1px solid var(--fc-border-color) !important;
+  padding: 12px 0;
+}
+
+.fc-timegrid-col {
+  border-right: 1px solid var(--fc-border-color) !important;
+}
+.fc-day {
+  border-right: 1px solid var(--fc-border-color) !important;
+}
+
+.fc-scrollgrid {
+  border: 1px solid var(--fc-border-color) !important;
+  border-radius: 8px;
+}
+.fc-scrollgrid td {
+  border-right: 1px solid var(--fc-border-color) !important;
+}
+
+td.fc-timegrid-slot {
+  border-bottom: 1px solid var(--fc-border-color) !important;
+}
+
+.fc-v-event {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+.fc-event-main {
+  padding: 0 !important;
+  width: 100%;
+  height: 100%;
+  overflow: visible !important;
+}
+.fc-timegrid-slot-label {
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: hsl(var(--muted-foreground));
+}
