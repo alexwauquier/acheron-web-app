@@ -74,6 +74,9 @@ export default function PlanningCalendar({ events }: Props) {
             slotMinTime="07:00:00"
             slotMaxTime="20:00:00"
             slotDuration="01:00:00"
+            dayHeaderFormat="dddd DD/MM"
+            
+
             
             slotLabelFormat={{
                 hour: '2-digit',
