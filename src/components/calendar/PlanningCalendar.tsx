@@ -10,6 +10,8 @@ import './calendar.css';
 import { type PlanningEvent } from './calendar-utils';
 import CalendarEventCard from './CalendarEventCard';
 import EventDetailModal from './EventDetailModal';
+import momentPlugin from '@fullcalendar/moment';
+
 
 interface Props {
   events: PlanningEvent[];
@@ -18,8 +20,6 @@ interface Props {
 export default function PlanningCalendar({ events }: Props) {
   const calendarRef = useRef<FullCalendar>(null);
   const [selectedEvent, setSelectedEvent] = useState<PlanningEvent | null>(null);
-
-
 
   const handlePrev = () => calendarRef.current?.getApi().prev();
   const handleNext = () => calendarRef.current?.getApi().next();
@@ -63,7 +63,7 @@ export default function PlanningCalendar({ events }: Props) {
       <CardContent className="flex-1 p-0 relative h-full">
          <FullCalendar
             ref={calendarRef}
-            plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
+            plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin, momentPlugin]}
             initialView="timeGridWeek"
             headerToolbar={false} 
             events={events}
@@ -75,9 +75,7 @@ export default function PlanningCalendar({ events }: Props) {
             slotMaxTime="20:00:00"
             slotDuration="01:00:00"
             dayHeaderFormat="dddd DD/MM"
-            
-
-            
+        
             slotLabelFormat={{
                 hour: '2-digit',
                 minute: '2-digit',
